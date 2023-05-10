@@ -27,16 +27,17 @@ Any other source code, input files, etc. should also be included in the created 
 The procedure for contributing content to this report is as follows:
 
 1. Confirm that you have permission to publish any content needed to reproduce the issue you are reporting.
-   A. For example, if reporting a compiler bug, confirm permission to publish the source code which elicited the bug.
+    1. For example, if reporting a compiler bug, confirm permission to publish the source code which elicited the bug.
 2. Create a pull request with content as described [above](#Report-Contents).
 3. Request a review from someone who can confirm the issue.
    For example someone else at your center that can confirm the steps to reproduce are correct and sufficient,
    or someone at another center who can confirm that the issue exists also in their environment.
 5. Once the PR is merged, open a bug report with the relevant project/vendor, pointing them to the submitted folder.
-6. Track the issue and open PR's to update content as appropriate. I.e. adding versions and environments affected, workarounds, etc.
-7. When a fix has been published and sufficiently diseminated, open a PR to remove the repport
-   A. This will help to keep the repository from getting cluttered/dominated by old issues
-   B. The PR description should identify the version of the tool containing the fix and a pointer to some indication from the developer of that tool announcing the fix.
+6. It may be beneficial at this point to go ahead and create draft PR for deleting the report (as in the last step below) as an easy place for others to watch and get notifications about updates and resolution.
+7. Track the issue and open PR's to update content as appropriate. I.e. adding versions and environments affected, workarounds, etc.
+8. When a fix has been published and sufficiently diseminated, open a PR to remove the repport
+    1. This will help to keep the repository from getting cluttered/dominated by old issues
+    2. The PR description should identify the version of the tool containing the fix and a pointer to some indication from the developer of that tool announcing the fix.
 
 ## PR Review Procedure
 
