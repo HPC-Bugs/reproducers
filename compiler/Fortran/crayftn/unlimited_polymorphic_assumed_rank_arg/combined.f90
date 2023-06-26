@@ -2,10 +2,10 @@ module a
 contains
   subroutine foo(x)
     class(*), intent(in) :: x(..)
-    select type (x)
-    type is (integer)
-      select rank (x)
-      rank (0)
+    select rank (x)
+    rank (0)
+      select type (x)
+      type is (integer)
         print *, x
       end select
     end select
