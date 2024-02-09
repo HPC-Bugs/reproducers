@@ -14,8 +14,8 @@ This is triggered by trying to use an associate-name created by getting a slice 
 See below:
 
 ```text
-~/reproducers$ ifx example.f90 
-example.f90(14): error #5529: CHARACTER variable 'ASSOCIATENAME' has no length argument in routines with C or STDCALL attribute
+~/reproducers$ ifx example.f90
+example.f90(11): error #5529: CHARACTER variable 'ASSOCIATENAME' has no length argument in routines with C or STDCALL attribute
         returnVal = index(associateName, '"')
 --------------------------^
 compilation aborted for example.f90 (code 1)
