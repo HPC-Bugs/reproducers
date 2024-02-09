@@ -9,7 +9,7 @@ The included file, [./example.f90] illustrates the problem.
 
 ## Steps to Reproduce
 
-This is triggered by trying to use an associate-name created by getting a slice of an assumed character length variable, which seemingly has not be given a length, as can be seen when trying to compile `example.f90`.
+This is triggered when refering to an associate-name created when the selector was a slice of an assumed character length variable. The associate-name seemingly has not be given a length. This behavior can be observed when trying to compile `example.f90`.
 
 See below:
 
