@@ -1,7 +1,15 @@
 # Segfault (run-time) with unlimited polymorphic
 
-version: ifx (IFX) 2024.0.0 20231017
-system: discover.nccs.nasa.gov
+``` yaml
+compiler: ifx # or gfortran or ...
+version: 2024.0.0
+operating system:  SLES15
+platform: discover.nccs.nasa.gov
+bug-type: runtime
+ticket:  3324991919
+url: N/A
+```
+
 
 ## Additional Content
 
