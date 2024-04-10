@@ -57,3 +57,30 @@ ftn-7991 ftn: INTERNAL MYPROC, File = example.f90, Line = 15
 ftn-2116 ftn: INTERNAL  
   "/opt/cray/pe/cce/17.0.0/cce/x86_64/bin/optcg" was terminated due to receipt of signal 06:  Aborted.
 ```
+
+## Workaround
+
+Use a temporary variable or associate name. I.e.
+
+```fortran
+module mod
+  implicit none
+
+  type mytype
+    logical :: skip = .false.
+  contains
+    procedure :: myproc
+  end type
+
+contains
+
+  subroutine myproc(self)
+    implicit none
+    class(mytype), intent(in) :: self
+    associate(tmp => merge("true ","false",self%skip))
+      write(*,*) trim(tmp)
+    end associate
+  end subroutine
+
+end module
+```
