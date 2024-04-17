@@ -20,6 +20,18 @@ The README should contain the following information:
 * Detailed description of the steps needed to reproduce the issue
 * (optional) A description for how to work around the issue
 
+We recommend that the following schema be used where appropriate:
+
+```yaml
+compiler: ifx # or gfortran or ...
+version: 2024.0.0
+operating system:  SLES15
+platform: discover.nccs.nasa.gov
+bug-type: runtime # or compile time
+ticket:  3324991919 # if submitted to a vendor ticketing system
+url: ... # if link is available to the ticketing system (e.g., GNU)
+```
+
 Any other source code, input files, etc. should also be included in the created folder sufficient for an independent contributor to reproduce the encountered issue.
 
 ## Contributing
@@ -49,6 +61,7 @@ For anyone who has been requested to review a PR to this repository, please use 
 2. Verify that the content is within a new, single folder with an appropriate path.
 3. Ensure the README contains the information as specificed [above](#Report-Contents).
 4. Confirm that you can follow directions provided to reproduce the issue
+
 
 ### Removing a Resolved Issue
 
