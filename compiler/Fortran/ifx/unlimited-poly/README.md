@@ -10,6 +10,7 @@ ticket:  3324991919
 url: N/A
 ```
 
+The bug appears to require the use of -fiopenmp (and deactivation of optimization.) 
 
 ## Additional Content
 
