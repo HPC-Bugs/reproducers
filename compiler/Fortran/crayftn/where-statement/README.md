@@ -1,7 +1,10 @@
 # WHERE statement defined assignment
 
-version: Cray Fortran : Version 17.0.0
-system: perlmutter
+compiler: crayftn
+version: 17.0.0
+operating system: "SUSE Linux Enterprise Server 15 SP4"
+platform: perlmutter.nersc.gov
+bug-type: compile time
 
 ## Additional Content
 
@@ -60,4 +63,22 @@ ftn-7991 ftn: INTERNAL EXAMPLE, File = example.f90, Line = 34
   INTERNAL COMPILER ERROR:  "Array syntax flags do not match" (/home/jenkins/crayftn/pdgcs/v_expr_tbl.c, line 413, version b59b7a8e9169719529cf5ab440f3c301e515d047)
 ftn-2116 ftn: INTERNAL
   "/opt/cray/pe/cce/17.0.0/cce/x86_64/bin/optcg" was terminated due to receipt of signal 06:  Aborted.
+```
+
+## Workaround
+
+The issue is simple enough to workaround by changing the `where` statement as follows:
+
+from
+
+```fortran
+    where(blank_lines) lines = ""
+```
+
+to
+
+```fortran
+    do concurrent (integer :: i = 1:size(lines), blank_lines(i))
+        lines(i) = ""
+    end do
 ```
